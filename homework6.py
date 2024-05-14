@@ -36,6 +36,14 @@ class Record:
                     print(e)
                 return
         print("Phone not found.")
+    
+    def remove_phone(self, phone):
+        for p in self.phones:
+            if p.value == phone:
+                self.phones.remove(p)
+                print(f"Phone {phone} removed successfully.")
+                return
+        print("Phone not found.")
 
     def find_phone(self, phone):
         for p in self.phones:
